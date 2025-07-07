@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Especial</title>
     <style>
+        /* [Todo el CSS anterior se mantiene igual] */
         * {
             margin: 0;
             padding: 0;
@@ -88,6 +89,7 @@
             color: #ff4d88;
             margin-bottom: 20px;
             text-align: center;
+            font-size: 1.8rem;
         }
         
         .card-content {
@@ -96,6 +98,9 @@
             padding: 20px;
             margin-bottom: 20px;
             border: 1px solid #ffd6e7;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
         }
         
         .card-img {
@@ -114,6 +119,7 @@
             max-width: 100%;
             max-height: 100%;
             object-fit: cover;
+            border-radius: 8px;
         }
         
         .nav-dots {
@@ -147,49 +153,41 @@
     
     <div class="envelope">
         <div class="envelope-header">
-            <h1>Para Mi Sofia</h1>
-            <p>Desliza para ver mis mensajes</p>
+            <h1>Para Mi Sofía</h1>
+            <p>Desliza para descubrir mi corazón</p>
         </div>
         
         <div class="cards-container" id="cards">
             <!-- Tarjeta 1 -->
             <div class="card">
-                <h2>Mi Primer Recuerdo</h2>
+                <h2>Nuestro Comienzo</h2>
                 <div class="card-content">
-                    <p>Desde el momento en que te conocí, supe que eras alguien especial. Tus ojos brillan con una luz interior que ilumina mi mundo, y tu sonrisa es capaz de hacer que mi corazón lata más rápido. La forma en que tus labios se curvan cuando hablas de algo que te apasiona es simplemente irresistible. Pero lo que realmente me cautiva es la profundidad de tu alma, tu personalidad única y tu actitud ante la vida. Eres una persona auténtica, genuina y llena de vida, y eso es lo que me hace sentir tan atraído hacia ti. Me encanta la forma en que piensas, la forma en que sientes y la forma en que vives. Eres una obra de arte en movimiento, y yo soy afortunado de poder ser testigo de tu belleza interior.</p>
+                    <p>Recuerdo ese instante como si fuera ayer cuando los dos nerviosos y apenados hablamos me diste tu numero y en aquella noche conectamos en el acto mas lindo el baile y sentimos una quimica y un fluir maravillosos. La manera en que tu sonrisa iluminó todo el mundo y cómo tu risa y tu voz se convirtieron en mi melodía favorita. Desde entonces, cada día  ha sido un regalo que atesoro profundamente.</p>
                 </div>
                 <div class="card-img">
-                    <img src="presente.jpeg" alt="Nuestro primer momento">
+                    <img src="presente.jpeg" alt="Nuestros primeros momentos">
                 </div>
             </div>
             
             <!-- Tarjeta 2 -->
             <div class="card">
-                <h2>Lo Que Más Amo de Ti</h2>
+                <h2>Lo Que Adoro de Ti</h2>
                 <div class="card-content">
-                    <p>Lo que más amo de ti es la forma en que iluminas mi mundo con tu presencia. Tus ojos brillan con una luz interior que me hace sentir vivo, y tu sonrisa es capaz de iluminar incluso los días más oscuros. Pero lo que realmente me enamora es tu alma, tu corazón y tu espíritu. Tu autenticidad, tu empatía y tu capacidad para amar sin condiciones son cualidades que admiro y amo profundamente.
-
-Recuerdo especialmente aquella noche que bailamos juntos, y sentí una conexión tan fuerte contigo. La química entre nosotros era palpable, y me sentí completamente en sintonía contigo. Fue como si el mundo se hubiera detenido y solo existiéramos tú y yo. En ese momento, supe que había algo especial entre nosotros, algo que va más allá de la atracción física.
-
-Eres una persona única y especial, y yo soy afortunado de tenerte en mi vida.</p>
+                    <p>Me enamora tu forma de ver la vida con tantos colores. Tu bondad que no conoce límites, tu inteligencia que enamora y esa mirada tuya que dice más que mil palabras. Eres mi lugar seguro en este mundo.</p>
                 </div>
                 <div class="card-img">
-                    <img src="ella.jpeg" alt="Lo que amo de ti">
+                    <img src="ella.jpeg" alt="La mujer que amo">
                 </div>
             </div>
             
             <!-- Tarjeta 3 -->
             <div class="card">
-                <h2>Nuestro Futuro</h2>
+                <h2>Juntos Mañana</h2>
                 <div class="card-content">
-                    <p>Juntos, podemos crear un futuro lleno de amor, risas y aventuras. Podemos explorar nuevos lugares, aprender nuevas cosas y crecer como personas. Podemos construir un hogar lleno de calor y comprensión, donde podamos ser nosotros mismos sin miedo a ser juzgados.
-
-Quiero pasar el resto de mi vida contigo, explorando los altibajos de la vida, y creando recuerdos que durarán para siempre. Quiero ser tu compañero, tu amigo y tu amor, y quiero que seas el mío también.
-
-Juntos, podemos hacer que nuestro futuro sea brillante y hermoso, lleno de posibilidades y oportunidades. Estoy emocionado de ver lo que el futuro nos depara, y sé que mientras estemos juntos, podemos enfrentar cualquier desafío que se nos presente.</p>
+                    <p>Veo nuestro futuro lleno de tardes de café compartidas, viajes improvisados y risas que llenan cada rincón de nuestro hogar. Contigo, cada "para siempre" se siente corto. Eres mi mayor aventura y mi paz al mismo tiempo.</p>
                 </div>
                 <div class="card-img">
-                    <img src="futuro.jpeg" alt="Nuestro futuro">
+                    <img src="futuro.jpeg" alt="Nuestro camino juntos">
                 </div>
             </div>
         </div>
@@ -202,11 +200,11 @@ Juntos, podemos hacer que nuestro futuro sea brillante y hermoso, lleno de posib
     </div>
 
     <script>
+        // [El JavaScript anterior se mantiene igual]
         const cardsContainer = document.getElementById('cards');
         const dots = document.querySelectorAll('.dot');
         let currentIndex = 0;
         
-        // Navegación por puntos
         function goToCard(index) {
             cardsContainer.scrollTo({
                 left: cardsContainer.offsetWidth * index,
@@ -216,14 +214,12 @@ Juntos, podemos hacer que nuestro futuro sea brillante y hermoso, lleno de posib
             currentIndex = index;
         }
         
-        // Actualizar puntos de navegación
         function updateDots(index) {
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
         }
         
-        // Detectar scroll para cambiar puntos
         cardsContainer.addEventListener('scroll', () => {
             const cardWidth = cardsContainer.offsetWidth;
             const scrollPos = cardsContainer.scrollLeft;
@@ -235,7 +231,6 @@ Juntos, podemos hacer que nuestro futuro sea brillante y hermoso, lleno de posib
             }
         });
         
-        // Navegación por gestos táctiles
         let startX = 0;
         let isDown = false;
         
@@ -263,7 +258,6 @@ Juntos, podemos hacer que nuestro futuro sea brillante y hermoso, lleno de posib
             }
         });
 
-        // Permitir scroll vertical sin interferencias
         document.querySelectorAll('.card').forEach(card => {
             card.addEventListener('touchmove', function(e) {
                 if (this.scrollHeight > this.clientHeight) {
