@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Especial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffe6f2, #ffffff);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #ff4d88;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+        
+        .envelope {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .envelope-header {
+            background: linear-gradient(90deg, #ff4d88, #ff99cc);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .cards-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+            height: 500px;
+        }
+        
+        .card {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            padding: 30px;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .card h2 {
+            color: #ff4d88;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .card-content {
+            background: #fff9fc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ffd6e7;
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background: #ffe6f2;
+            border-radius: 10px;
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .card-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        
+        .nav-dots {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: #ffb3d9;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .dot.active {
+            background: #ff4d88;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='index.html'">←</button>
+    
+    <div class="envelope">
+        <div class="envelope-header">
+            <h1>Para Mi Sofia</h1>
+            <p>Desliza para ver mis mensajes</p>
+        </div>
+        
+        <div class="cards-container" id="cards">
+            <!-- Tarjeta 1 -->
+            <div class="card">
+                <h2>Mi Primer Recuerdo</h2>
+                <div class="card-content">
+                    <p>Desde el momento en que te conocí, supe que eras alguien especial. Tus ojos brillan con una luz interior que ilumina mi mundo, y tu sonrisa es capaz de hacer que mi corazón lata más rápido. La forma en que tus labios se curvan cuando hablas de algo que te apasiona es simplemente irresistible. Pero lo que realmente me cautiva es la profundidad de tu alma, tu personalidad única y tu actitud ante la vida. Eres una persona auténtica, genuina y llena de vida, y eso es lo que me hace sentir tan atraído hacia ti. Me encanta la forma en que piensas, la forma en que sientes y la forma en que vives. Eres una obra de arte en movimiento, y yo soy afortunado de poder ser testigo de tu belleza interior.</p>
+                </div>
+                <div class="card-img">
+                    <img src="public/presente.jpeg" alt="Nuestro primer momento">
+                </div>
+            </div>
+            
+            <!-- Tarjeta 2 -->
+            <div class="card">
+                <h2>Lo Que Más Amo de Ti</h2>
+                <div class="card-content">
+                    <p>Lo que más amo de ti es la forma en que iluminas mi mundo con tu presencia. Tus ojos brillan con una luz interior que me hace sentir vivo, y tu sonrisa es capaz de iluminar incluso los días más oscuros. Pero lo que realmente me enamora es tu alma, tu corazón y tu espíritu. Tu autenticidad, tu empatía y tu capacidad para amar sin condiciones son cualidades que admiro y amo profundamente.
+
+Recuerdo especialmente aquella noche que bailamos juntos, y sentí una conexión tan fuerte contigo. La química entre nosotros era palpable, y me sentí completamente en sintonía contigo. Fue como si el mundo se hubiera detenido y solo existiéramos tú y yo. En ese momento, supe que había algo especial entre nosotros, algo que va más allá de la atracción física.
+
+Eres una persona única y especial, y yo soy afortunado de tenerte en mi vida.</p>
+                </div>
+                <div class="card-img">
+                    <img src="public/ella.jpeg" alt="Lo que amo de ti">
+                </div>
+            </div>
+            
+            <!-- Tarjeta 3 -->
+            <div class="card">
+                <h2>Nuestro Futuro</h2>
+                <div class="card-content">
+                    <p>Nuestro futuro es un lienzo en blanco, esperando a ser pintado con los colores de nuestra imaginación y nuestros sueños. Juntos, podemos crear un futuro lleno de amor, risas y aventuras. Podemos explorar nuevos lugares, aprender nuevas cosas y crecer como personas. Podemos construir un hogar lleno de calor y comprensión, donde podamos ser nosotros mismos sin miedo a ser juzgados.
+
+Quiero pasar el resto de mi vida contigo, explorando los altibajos de la vida, y creando recuerdos que durarán para siempre. Quiero ser tu compañero, tu amigo y tu amor, y quiero que seas el mío también.
+
+Juntos, podemos hacer que nuestro futuro sea brillante y hermoso, lleno de posibilidades y oportunidades. Estoy emocionado de ver lo que el futuro nos depara, y sé que mientras estemos juntos, podemos enfrentar cualquier desafío que se nos presente.</p>
+                </div>
+                <div class="card-img">
+                    <img src="public/futuro.jpeg" alt="Nuestro futuro">
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-dots">
+            <div class="dot active" onclick="goToCard(0)"></div>
+            <div class="dot" onclick="goToCard(1)"></div>
+            <div class="dot" onclick="goToCard(2)"></div>
+        </div>
+    </div>
+
+    <script>
+        const cardsContainer = document.getElementById('cards');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        
+        // Navegación por puntos
+        function goToCard(index) {
+            cardsContainer.scrollTo({
+                left: cardsContainer.offsetWidth * index,
+                behavior: 'smooth'
+            });
+            updateDots(index);
+            currentIndex = index;
+        }
+        
+        // Actualizar puntos de navegación
+        function updateDots(index) {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+        
+        // Detectar scroll para cambiar puntos
+        cardsContainer.addEventListener('scroll', () => {
+            const cardWidth = cardsContainer.offsetWidth;
+            const scrollPos = cardsContainer.scrollLeft;
+            const newIndex = Math.round(scrollPos / cardWidth);
+            
+            if (newIndex !== currentIndex) {
+                updateDots(newIndex);
+                currentIndex = newIndex;
+            }
+        });
+        
+        // Navegación por gestos táctiles
+        let startX = 0;
+        let isDown = false;
+        
+        cardsContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].pageX;
+            isDown = true;
+        });
+        
+        cardsContainer.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+        });
+        
+        cardsContainer.addEventListener('touchend', (e) => {
+            if (!isDown) return;
+            isDown = false;
+            
+            const endX = e.changedTouches[0].pageX;
+            const diffX = startX - endX;
+            
+            if (diffX > 50 && currentIndex < 2) {
+                goToCard(currentIndex + 1);
+            } else if (diffX < -50 && currentIndex > 0) {
+                goToCard(currentIndex - 1);
+            }
+        });
+    </script>
+</body>
+</html>
