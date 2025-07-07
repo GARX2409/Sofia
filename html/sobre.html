@@ -15,14 +15,16 @@
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #ffe6f2, #ffffff);
             min-height: 100vh;
+            height: auto;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
         }
-        
+
         .back-btn {
-            position: absolute;
+            position: fixed;
             top: 20px;
             left: 20px;
             background: #ff4d88;
@@ -46,7 +48,7 @@
             background: white;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden;
+            overflow: visible;
             margin-top: 50px;
             position: relative;
         }
@@ -56,6 +58,9 @@
             color: white;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
         
         .cards-container {
@@ -65,14 +70,17 @@
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
             width: 100%;
-            height: 500px;
+            height: auto;
+            min-height: 100vh;
+            overflow-y: hidden;
         }
         
         .card {
             flex: 0 0 100%;
             scroll-snap-align: start;
             padding: 30px;
-            height: 100%;
+            min-height: calc(100vh - 140px);
+            height: auto;
             overflow-y: auto;
         }
         
@@ -112,6 +120,10 @@
             display: flex;
             justify-content: center;
             padding: 20px;
+            position: sticky;
+            bottom: 0;
+            background: white;
+            z-index: 5;
         }
         
         .dot {
@@ -170,7 +182,7 @@ Eres una persona única y especial, y yo soy afortunado de tenerte en mi vida.</
             <div class="card">
                 <h2>Nuestro Futuro</h2>
                 <div class="card-content">
-                    <p>Nuestro futuro es un lienzo en blanco, esperando a ser pintado con los colores de nuestra imaginación y nuestros sueños. Juntos, podemos crear un futuro lleno de amor, risas y aventuras. Podemos explorar nuevos lugares, aprender nuevas cosas y crecer como personas. Podemos construir un hogar lleno de calor y comprensión, donde podamos ser nosotros mismos sin miedo a ser juzgados.
+                    <p>Juntos, podemos crear un futuro lleno de amor, risas y aventuras. Podemos explorar nuevos lugares, aprender nuevas cosas y crecer como personas. Podemos construir un hogar lleno de calor y comprensión, donde podamos ser nosotros mismos sin miedo a ser juzgados.
 
 Quiero pasar el resto de mi vida contigo, explorando los altibajos de la vida, y creando recuerdos que durarán para siempre. Quiero ser tu compañero, tu amigo y tu amor, y quiero que seas el mío también.
 
@@ -249,6 +261,15 @@ Juntos, podemos hacer que nuestro futuro sea brillante y hermoso, lleno de posib
             } else if (diffX < -50 && currentIndex > 0) {
                 goToCard(currentIndex - 1);
             }
+        });
+
+        // Permitir scroll vertical sin interferencias
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('touchmove', function(e) {
+                if (this.scrollHeight > this.clientHeight) {
+                    e.stopPropagation();
+                }
+            }, { passive: false });
         });
     </script>
 </body>
